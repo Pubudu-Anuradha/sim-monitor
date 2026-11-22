@@ -1,0 +1,104 @@
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  line-height: 1.45;
+
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --text: #16181d;
+  --text-muted: #5f6672;
+  --border: #e3e6ea;
+  --row-hover: #f2f4f7;
+  --chip-bg: #eceff3;
+  --scrim: rgb(15 18 25 / 0.35);
+  --accent: #0b7a6f;
+  --accent-fg: #ffffff;
+
+  --ok-bg: #e3f5ea;
+  --ok-fg: #17733f;
+  --info-bg: #e5effc;
+  --info-fg: #1f5fb8;
+  --bad-bg: #fde8e7;
+  --bad-fg: #b3261e;
+  --warn-fg: #b54708;
+
+  --dialog-bg: #fbe6ee;
+  --dialog-fg: #a3164e;
+  --mobitel-bg: #e4eefb;
+  --mobitel-fg: #1d4f91;
+  --hutch-bg: #fff1dc;
+  --hutch-fg: #9a5200;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111317;
+    --surface: #181b20;
+    --text: #e8eaed;
+    --text-muted: #9aa1ac;
+    --border: #2a2f37;
+    --row-hover: #1f232a;
+    --chip-bg: #262b33;
+    --scrim: rgb(0 0 0 / 0.55);
+    --accent: #2bb3a3;
+    --accent-fg: #06201d;
+
+    --ok-bg: #133524;
+    --ok-fg: #6fd69b;
+    --info-bg: #162b47;
+    --info-fg: #8bb8f5;
+    --bad-bg: #3d1a18;
+    --bad-fg: #f2a19b;
+    --warn-fg: #f5a65b;
+
+    --dialog-bg: #3d1828;
+    --dialog-fg: #f39abd;
+    --mobitel-bg: #172a45;
+    --mobitel-fg: #93bcf2;
+    --hutch-bg: #3a2810;
+    --hutch-fg: #f3c07a;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+button {
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: var(--row-hover);
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+input {
+  font: inherit;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+}

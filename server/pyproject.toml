@@ -1,0 +1,38 @@
+[project]
+name = "sim-monitor-server"
+version = "1.0.0"
+description = "Desktop side of SIM Monitor: phone registry over WebSocket, readings store, dashboard API"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "cryptography>=50.0.2",
+    "fastapi>=0.165.0",
+    "segno>=1.6.6",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[dependency-groups]
+dev = [
+    "httpx2>=2.16.2",
+    "pytest>=9.2.0",
+    "pytest-asyncio>=1.5.0",
+    "ruff>=0.17.6",
+    "websockets>=17.4",
+]
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "ASYNC"]
+# Long string literals (carrier replies) are clearer unbroken; the formatter handles code.
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+pythonpath = ["."]

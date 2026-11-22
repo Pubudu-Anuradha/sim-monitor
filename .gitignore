@@ -1,0 +1,32 @@
+.devenv/
+# Python
+server/.venv/
+server/.env
+server/data/
+__pycache__/
+*.pyc
+.pytest_cache/
+# Web
+web/node_modules/
+web/dist/
+# Android
+android/.gradle/
+android/.kotlin/
+android/build/
+android/app/build/
+android/local.properties
+android/.idea/
+*.iml
+# Release outputs and secrets (never commit signing keys or server state)
+dist/
+backups/
+*.jks
+*.keystore
+release.properties
+
+# Real phone captures: personal (balances, other senders). Committed fixtures are sanitized samples.
+docs/replies/local/
+
+# Local settings (LAN IP etc.) and machine-specific agent notes
+.env
+AGENTS.local.md

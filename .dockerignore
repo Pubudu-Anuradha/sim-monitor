@@ -1,0 +1,13 @@
+.git
+.devenv
+android
+docs
+**/node_modules
+**/.venv
+**/__pycache__
+**/.pytest_cache
+**/.ruff_cache
+server/data
+server/tests
+server/tools
+web/dist
